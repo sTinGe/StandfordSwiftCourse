@@ -22,7 +22,6 @@ class ViewController: UIViewController
             display.text = digit
             userIsInput = true
         }
-        
     }
 }
 
