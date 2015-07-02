@@ -33,10 +33,11 @@ class ViewController: UIViewController
     }
     
     switch operation {
-    case "✕": performOperation(multiply)
-    case "÷": performOperation(divide)
-    case "+": performOperation(plus)
-    case "−": performOperation(minus)
+    case "✕": performOperation{ $0 * $1 }
+    case "÷": performOperation{ $1 / $0 }
+    case "+": performOperation{ $0 + $1 }
+    case "−": performOperation{ $1 - $0 }
+    case "√": performOperation{ sqrt($0) }
     default:
       break
     }
@@ -45,6 +46,13 @@ class ViewController: UIViewController
   func performOperation(operation: (Double, Double) -> Double) {
     if operand.size() >= 2 {
       displayValue = operation(operand.pop(), operand.pop())
+      enter()
+    }
+  }
+  
+  private func performOperation(operation: Double -> Double) {
+    if operand.size() >= 1 {
+      displayValue = operation(operand.pop())
       enter()
     }
   }

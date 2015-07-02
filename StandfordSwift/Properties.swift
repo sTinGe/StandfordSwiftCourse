@@ -9,22 +9,6 @@
 import Foundation
 
 // properties
-func multiply(op1: Double, op2: Double) -> Double {
-  return op2 * op1
-}
-
-func divide(op1: Double, op2: Double) -> Double {
-  return op2 / op1
-}
-
-func plus(op1: Double, op2: Double) -> Double {
-  return op2 + op1
-}
-
-func minus(op1: Double, op2: Double) -> Double {
-  return op2 - op1
-}
-
 func transToDouble(displayValue: String) -> Double {
   return NSNumberFormatter().numberFromString(displayValue)!.doubleValue
 }
