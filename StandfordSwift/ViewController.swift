@@ -23,5 +23,22 @@ class ViewController: UIViewController
             userIsInput = true
         }
     }
+    
+    var operandStack = Array<Double>()
+    @IBAction func enter() {
+        userIsInput = false
+        operandStack.append(displayValue)
+        println("operandStack = \(operandStack)")
+    }
+    
+    var displayValue: Double {
+        get {
+            return NSNumberFormatter().numberFromString(display.text!)!.doubleValue
+        }
+        set {
+            display.text = "\(newValue)"
+            userIsInput = false
+        }
+    }
 }
 
