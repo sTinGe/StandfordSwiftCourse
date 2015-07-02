@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE249B7C1B4563720017784D /* Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE249B7B1B4563720017784D /* Properties.swift */; };
+		BE249B7E1B4578970017784D /* OperandStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE249B7D1B4578970017784D /* OperandStack.swift */; };
 		BEEB8D1C1B43918D00A12F29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEB8D1B1B43918D00A12F29 /* AppDelegate.swift */; };
 		BEEB8D1E1B43918D00A12F29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEB8D1D1B43918D00A12F29 /* ViewController.swift */; };
 		BEEB8D211B43918D00A12F29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEEB8D1F1B43918D00A12F29 /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE249B7B1B4563720017784D /* Properties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Properties.swift; sourceTree = "<group>"; };
+		BE249B7D1B4578970017784D /* OperandStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperandStack.swift; sourceTree = "<group>"; };
 		BEEB8D161B43918D00A12F29 /* StandfordSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StandfordSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEEB8D1A1B43918D00A12F29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEEB8D1B1B43918D00A12F29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +60,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE249B7A1B45635D0017784D /* properties */ = {
+			isa = PBXGroup;
+			children = (
+				BE249B7B1B4563720017784D /* Properties.swift */,
+			);
+			name = properties;
+			sourceTree = "<group>";
+		};
+		BE249B7F1B457C610017784D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BE249B7D1B4578970017784D /* OperandStack.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		BEEB8D0D1B43918D00A12F29 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +97,8 @@
 		BEEB8D181B43918D00A12F29 /* StandfordSwift */ = {
 			isa = PBXGroup;
 			children = (
+				BE249B7F1B457C610017784D /* Models */,
+				BE249B7A1B45635D0017784D /* properties */,
 				BEEB8D1D1B43918D00A12F29 /* ViewController.swift */,
 				BEEB8D1F1B43918D00A12F29 /* Main.storyboard */,
 				BEEB8D191B43918D00A12F29 /* Supporting Files */,
@@ -212,6 +234,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE249B7E1B4578970017784D /* OperandStack.swift in Sources */,
+				BE249B7C1B4563720017784D /* Properties.swift in Sources */,
 				BEEB8D1E1B43918D00A12F29 /* ViewController.swift in Sources */,
 				BEEB8D1C1B43918D00A12F29 /* AppDelegate.swift in Sources */,
 			);

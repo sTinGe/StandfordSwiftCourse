@@ -10,53 +10,62 @@ import UIKit
 
 class ViewController: UIViewController
 {
-
-    @IBOutlet weak var display: UILabel!
-    var userIsInput:Bool = false
-    
-    @IBAction func appendDigit(sender: UIButton) {
-        let digit = sender.currentTitle!
-        if userIsInput {
-            display.text = display.text! + digit
-        } else {
-            display.text = digit
-            userIsInput = true
-        }
+  
+  @IBOutlet weak var display: UILabel!
+  var userIsInput:Bool = false
+  var operand = OperandStack()
+  
+  
+  @IBAction func appendDigit(sender: UIButton) {
+    let digit = sender.currentTitle!
+    if userIsInput {
+      display.text = display.text! + digit
+    } else {
+      display.text = digit
+      userIsInput = true
     }
-    @IBAction func operate(sender: UIButton) {
-        let operation = sender.currentTitle!
-        if userIsInput {
-            enter()
-        }
-        switch operation {
-        case "✕":
-            if operandStack.count >= 2 {
-                displayValue = operandStack.removeLast() * operandStack.removeLast()
-                enter()
-            }
-        default:
-            break
-        }
+  }
+  
+  @IBAction func operate(sender: UIButton) {
+    let operation = sender.currentTitle!
+    if userIsInput {
+      enter()
     }
     
-    var operandStack = Array<Double>()
-    // put number into stack
-    @IBAction func enter() {
-        userIsInput = false
-        operandStack.append(displayValue)
-        println("operandStack = \(operandStack)")
+    switch operation {
+    case "✕": performOperation(multiply)
+    case "÷": performOperation(divide)
+    case "+": performOperation(plus)
+    case "−": performOperation(minus)
+    default:
+      break
     }
-    
-    var displayValue: Double {
-        get {
-            return NSNumberFormatter().numberFromString(display.text!)!.doubleValue
-        }
-        set {
-            display.text = "\(newValue)"
-            userIsInput = false
-        }
+  }
+  
+  func performOperation(operation: (Double, Double) -> Double) {
+    if operand.size() >= 2 {
+      displayValue = operation(operand.pop(), operand.pop())
+      enter()
     }
-    
-    
+  }
+  
+  // put the number into stack
+  @IBAction func enter() {
+    userIsInput = false
+    operand.push(displayValue)
+    println("\(operand.traversal())")
+  }
+  
+  var displayValue: Double {
+    get {
+      return NSNumberFormatter().numberFromString(display.text!)!.doubleValue
+    }
+    set {
+      display.text = "\(newValue)"
+      userIsInput = false
+    }
+  }
+  
+  
 }
 
