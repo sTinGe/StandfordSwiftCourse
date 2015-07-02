@@ -23,8 +23,24 @@ class ViewController: UIViewController
             userIsInput = true
         }
     }
+    @IBAction func operate(sender: UIButton) {
+        let operation = sender.currentTitle!
+        if userIsInput {
+            enter()
+        }
+        switch operation {
+        case "✕":
+            if operandStack.count >= 2 {
+                displayValue = operandStack.removeLast() * operandStack.removeLast()
+                enter()
+            }
+        default:
+            break
+        }
+    }
     
     var operandStack = Array<Double>()
+    // put number into stack
     @IBAction func enter() {
         userIsInput = false
         operandStack.append(displayValue)
@@ -40,5 +56,7 @@ class ViewController: UIViewController
             userIsInput = false
         }
     }
+    
+    
 }
 

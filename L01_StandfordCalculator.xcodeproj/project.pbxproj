@@ -411,6 +411,7 @@
 				BEEB8D371B43918D00A12F29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BEEB8D381B43918D00A12F29 /* Build configuration list for PBXNativeTarget "StandfordSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +420,7 @@
 				BEEB8D3A1B43918D00A12F29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
