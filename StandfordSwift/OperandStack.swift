@@ -10,9 +10,13 @@ import Foundation
 
 class OperandStack {
   var stack: Array<Double> = []
+  var displayValue: Double = 0
   
-   func push(value: Double) {
-    stack.append(value)
+  func store(value: Double) {
+    displayValue = value
+  }
+  func push() {
+    stack.append(displayValue)
   }
   
   func pop() -> Double {

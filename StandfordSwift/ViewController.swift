@@ -51,14 +51,16 @@ class ViewController: UIViewController
   
   // put the number into stack
   @IBAction func enter() {
+    operand.store(transToDouble(display.text!))
     userIsInput = false
-    operand.push(displayValue)
+    operand.push()
     println("\(operand.traversal())")
   }
   
+  // properties
   var displayValue: Double {
     get {
-      return NSNumberFormatter().numberFromString(display.text!)!.doubleValue
+      return transToDouble(display.text!)
     }
     set {
       display.text = "\(newValue)"
