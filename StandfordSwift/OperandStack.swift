@@ -45,6 +45,33 @@ class OperandStack{
     knownOps["√"] = Op.UnaryOperation("√", sqrt)
     
   }
+  
+  typealias PropertyList = AnyObject
+  
+  var program: PropertyList { // guaranteed to be a ProprttyList
+    get {
+      return opStack.map { $0.description }
+//      replaced following codes:
+//      var returnValue = Array<String>()
+//      for op in opStack {
+//        returnValue.append(op.description)
+//      }
+    }
+    set {
+      if let opSymbols = newValue as? Array<String> {
+        var newOpstack = [Op]()
+        for opSymbol in opSymbols {
+          if let op = knownOps[opSymbol] {
+            newOpstack.append(op)
+          } else if let operand = NSNumberFormatter().numberFromString(opSymbol)?.doubleValue {
+            newOpstack.append(.Operand(operand))
+          }
+        }
+        opStack = newOpstack
+      }
+    }
+  }
+  
   private func evaluate(ops: [Op]) -> (result: Double?, remainingOps: [Op]) {
     if !ops.isEmpty {
       var remainingOps = ops
