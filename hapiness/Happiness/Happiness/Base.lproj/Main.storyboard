@@ -19,14 +19,21 @@
                             <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Hx6-Mk-clz" customClass="FaceView" customModule="L02_Happiness" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                        <color key="value" red="1" green="0.10510749116066853" blue="0.29969460075786314" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.3043732740473275" green="1" blue="0.43399023428372263" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="scale">
+                                        <real key="value" value="0.90000000000000002"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="c2F-Bh-Mlk" appends="YES" id="dOz-MA-b1d"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -37,8 +44,16 @@
                             <constraint firstItem="Hx6-Mk-clz" firstAttribute="bottom" secondItem="TNO-Ud-1Js" secondAttribute="top" id="okh-kf-MN7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="faceView" destination="Hx6-Mk-clz" id="8xk-sQ-AGc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IUK-oO-aYP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="c2F-Bh-Mlk">
+                    <connections>
+                        <action selector="changeHappiness:" destination="g18-yL-nJW" id="2DT-tb-ahK"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="401" y="435"/>
         </scene>
