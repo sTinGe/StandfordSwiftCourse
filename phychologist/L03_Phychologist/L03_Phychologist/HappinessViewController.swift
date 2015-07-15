@@ -25,7 +25,9 @@ class HappinessViewController: UIViewController, FaceViewDataSource
   
   func updateUI() {
     // to update our UI, we just need to ask the FaceView to redraw
-    faceView.setNeedsDisplay()
+    faceView?.setNeedsDisplay()
+    title = "\(happiness)"
+    
   }
   
   // FaceViewDataSource

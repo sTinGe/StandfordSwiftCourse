@@ -17,6 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What do you see in your dream?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="9ZT-Wx-vHE">
+                                <rect key="frame" x="16" y="97" width="568" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NkN-oQ-NyJ">
                                 <rect key="frame" x="206" y="280" width="189" height="41"/>
                                 <constraints>
@@ -27,7 +33,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Mjr-dk-nlA" kind="show" identifier="sad" id="PAa-wV-JSb"/>
+                                    <segue destination="myU-0v-6hl" kind="showDetail" identifier="sad" id="PAa-wV-JSb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUB-ed-fnz">
@@ -37,7 +43,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Mjr-dk-nlA" kind="show" identifier="happy" id="67C-tr-g6e"/>
+                                    <segue destination="myU-0v-6hl" kind="showDetail" identifier="happy" id="67C-tr-g6e"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Muy-IM-SVA">
@@ -47,18 +53,27 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Mjr-dk-nlA" kind="show" identifier="meh" id="KKp-sJ-Rs9"/>
+                                    <segue destination="myU-0v-6hl" kind="showDetail" identifier="meh" id="KKp-sJ-Rs9"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What do you see in your dream?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="9ZT-Wx-vHE">
-                                <rect key="frame" x="16" y="97" width="568" height="43"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7a-i6-393">
+                                <rect key="frame" x="243" y="378" width="115" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="4WR-Yl-zP9"/>
+                                    <constraint firstAttribute="height" constant="52" id="rH9-Zd-xtL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Nothing!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nothing:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X6S-Ia-fLU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="r7a-i6-393" firstAttribute="top" secondItem="Muy-IM-SVA" secondAttribute="bottom" constant="8" symbolic="YES" id="8XA-ro-x5J"/>
                             <constraint firstItem="Muy-IM-SVA" firstAttribute="trailing" secondItem="NkN-oQ-NyJ" secondAttribute="trailing" id="CzW-kW-EU8"/>
                             <constraint firstItem="tUB-ed-fnz" firstAttribute="leading" secondItem="NkN-oQ-NyJ" secondAttribute="leading" id="Dsk-ZJ-eaR"/>
                             <constraint firstItem="9ZT-Wx-vHE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="IwO-D2-CdP"/>
@@ -70,6 +85,7 @@
                             <constraint firstItem="9ZT-Wx-vHE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="33" id="bg1-8B-iK9"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NkN-oQ-NyJ" secondAttribute="bottom" constant="277" id="mu7-Y6-LRO"/>
                             <constraint firstAttribute="centerX" secondItem="NkN-oQ-NyJ" secondAttribute="centerX" id="qi3-A0-z0v"/>
+                            <constraint firstItem="r7a-i6-393" firstAttribute="centerX" secondItem="Muy-IM-SVA" secondAttribute="centerX" id="rUh-Ac-CO0"/>
                             <constraint firstItem="9ZT-Wx-vHE" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="uHX-8l-BP8"/>
                             <constraint firstItem="Muy-IM-SVA" firstAttribute="top" secondItem="NkN-oQ-NyJ" secondAttribute="bottom" constant="8" symbolic="YES" id="vzZ-ce-g5v"/>
                             <constraint firstItem="NkN-oQ-NyJ" firstAttribute="top" secondItem="tUB-ed-fnz" secondAttribute="bottom" constant="8" symbolic="YES" id="wYF-NG-bt5"/>
@@ -84,10 +100,13 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Phychologist" id="PsT-ZN-ltH"/>
+                    <connections>
+                        <segue destination="myU-0v-6hl" kind="showDetail" identifier="nothing" id="99k-Za-ZYf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1392" y="551"/>
+            <point key="canvasLocation" x="1339" y="215"/>
         </scene>
         <!--Happiness View Controller-->
         <scene sceneID="mFu-TH-PS4">
@@ -129,6 +148,7 @@
                             <constraint firstItem="kWz-rg-RI1" firstAttribute="bottom" secondItem="Ovr-wc-gMS" secondAttribute="top" id="wTH-rQ-Gty"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="C8Y-IG-buq"/>
                     <connections>
                         <outlet property="faceView" destination="kWz-rg-RI1" id="qYz-8y-R4s"/>
                     </connections>
@@ -140,7 +160,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="564" y="1587"/>
+            <point key="canvasLocation" x="1364" y="965"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="u5j-EL-4RV">
@@ -148,7 +168,7 @@
                 <splitViewController id="C9n-yO-AZb" sceneMemberID="viewController">
                     <connections>
                         <segue destination="eW8-Hl-Tx8" kind="relationship" relationship="masterViewController" id="LZ0-Ly-wvI"/>
-                        <segue destination="Mjr-dk-nlA" kind="relationship" relationship="detailViewController" id="Suh-hU-mIH"/>
+                        <segue destination="myU-0v-6hl" kind="relationship" relationship="detailViewController" id="Suh-hU-mIH"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iCm-Q3-TyW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -171,10 +191,28 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LgK-Fp-Y2P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="580" y="551"/>
+            <point key="canvasLocation" x="552" y="215"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3nR-Iw-eF6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="myU-0v-6hl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5BJ-aE-yey">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Mjr-dk-nlA" kind="relationship" relationship="rootViewController" id="9Q6-Fn-CEs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iot-xa-KqW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="552" y="965"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="KKp-sJ-Rs9"/>
+        <segue reference="99k-Za-ZYf"/>
     </inferredMetricsTieBreakers>
 </document>
