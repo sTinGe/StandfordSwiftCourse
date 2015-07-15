@@ -19,7 +19,7 @@ protocol FaceViewDataSource: class {
 class FaceView: UIView
 {
     @IBInspectable
-    var lineWidth: CGFloat = 5 { didSet { setNeedsDisplay() } }
+    var lineWidth: CGFloat = 3 { didSet { setNeedsDisplay() } }
     @IBInspectable
     var color: UIColor = UIColor.blueColor() { didSet { setNeedsDisplay() } }
     @IBInspectable
@@ -110,8 +110,6 @@ class FaceView: UIView
         return path
     }
 
-
-    // 
     private func bezierPathForSmile(fractionOfMaxSmile: Double) -> UIBezierPath
     {
         let mouthWidth = faceRadius / Scaling.FaceRadiusToMouthWidthRatio

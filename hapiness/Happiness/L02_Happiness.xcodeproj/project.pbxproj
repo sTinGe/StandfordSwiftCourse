@@ -28,7 +28,7 @@
 
 /* Begin PBXFileReference section */
 		9A6E2D971B515DDE005A4F2A /* HappinessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HappinessViewController.swift; sourceTree = "<group>"; };
-		9A6E2D991B515F25005A4F2A /* FaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FaceView.swift; path = ../../../../../Documents/FaceView.swift; sourceTree = "<group>"; };
+		9A6E2D991B515F25005A4F2A /* FaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FaceView.swift; path = ../../../../Documents/FaceView.swift; sourceTree = "<group>"; };
 		9AD0E6231B515B8A002228D2 /* L02_Happiness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = L02_Happiness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD0E6271B515B8A002228D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AD0E6281B515B8A002228D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				9A6E2D971B515DDE005A4F2A /* HappinessViewController.swift */,
+				9A6E2D991B515F25005A4F2A /* FaceView.swift */,
 				9AD0E6251B515B8A002228D2 /* Happiness */,
 				9AD0E63B1B515B8A002228D2 /* HappinessTests */,
 				9AD0E6241B515B8A002228D2 /* Products */,
@@ -81,7 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				9AD0E62C1B515B8A002228D2 /* Main.storyboard */,
-				9A6E2D991B515F25005A4F2A /* FaceView.swift */,
 				9AD0E62F1B515B8A002228D2 /* Images.xcassets */,
 				9AD0E6261B515B8A002228D2 /* Supporting Files */,
 			);
