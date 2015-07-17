@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="C9n-yO-AZb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="C9n-yO-AZb">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -20,7 +20,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What do you see in your dream?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="9ZT-Wx-vHE">
                                 <rect key="frame" x="16" y="97" width="568" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NkN-oQ-NyJ">
@@ -108,10 +108,10 @@
             </objects>
             <point key="canvasLocation" x="1339" y="215"/>
         </scene>
-        <!--Happiness View Controller-->
+        <!--Diagnosed Happiness View Controller-->
         <scene sceneID="mFu-TH-PS4">
             <objects>
-                <viewController id="Mjr-dk-nlA" customClass="HappinessViewController" customModule="L03_Phychologist" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Mjr-dk-nlA" customClass="DiagnosedHappinessViewController" customModule="L03_Phychologist" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ta6-yc-e54"/>
                         <viewControllerLayoutGuide type="bottom" id="Ovr-wc-gMS"/>
@@ -148,7 +148,15 @@
                             <constraint firstItem="kWz-rg-RI1" firstAttribute="bottom" secondItem="Ovr-wc-gMS" secondAttribute="top" id="wTH-rQ-Gty"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="C8Y-IG-buq"/>
+                    <navigationItem key="navigationItem" id="C8Y-IG-buq">
+                        <barButtonItem key="rightBarButtonItem" title="History" id="4RY-H4-P7Z">
+                            <connections>
+                                <segue destination="e2M-wH-2sF" kind="popoverPresentation" identifier="Show Diagnostic History" popoverAnchorBarButtonItem="4RY-H4-P7Z" id="Dn6-nj-LSi">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="faceView" destination="kWz-rg-RI1" id="qYz-8y-R4s"/>
                     </connections>
@@ -161,6 +169,36 @@
                 </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1364" y="965"/>
+        </scene>
+        <!--Text View Controller-->
+        <scene sceneID="jRt-GY-idD">
+            <objects>
+                <viewController id="e2M-wH-2sF" customClass="TextViewController" customModule="L03_Phychologist" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6rK-iO-cym"/>
+                        <viewControllerLayoutGuide type="bottom" id="fn6-MQ-i5Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wCL-GY-H1d">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qyn-xZ-Xzq">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="Qyn-xZ-Xzq" id="LeW-ew-Wf8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ASj-ho-C8L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2030" y="965"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="u5j-EL-4RV">

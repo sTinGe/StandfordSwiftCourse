@@ -15,6 +15,8 @@
 		9AA356791B5680B8004F1E94 /* L03_PhychologistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA356781B5680B8004F1E94 /* L03_PhychologistTests.swift */; };
 		9AA356841B5683D3004F1E94 /* HappinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA356821B5683D3004F1E94 /* HappinessViewController.swift */; };
 		9AA356851B5683D3004F1E94 /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA356831B5683D3004F1E94 /* FaceView.swift */; };
+		BE89472B1B5899130017F3E1 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE89472A1B5899130017F3E1 /* TextViewController.swift */; };
+		BE89472D1B5899F30017F3E1 /* DiagnosedHappinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE89472C1B5899F30017F3E1 /* DiagnosedHappinessViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		9AA356781B5680B8004F1E94 /* L03_PhychologistTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L03_PhychologistTests.swift; sourceTree = "<group>"; };
 		9AA356821B5683D3004F1E94 /* HappinessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HappinessViewController.swift; sourceTree = "<group>"; };
 		9AA356831B5683D3004F1E94 /* FaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
+		BE89472A1B5899130017F3E1 /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextViewController.swift; path = ../TextViewController.swift; sourceTree = "<group>"; };
+		BE89472C1B5899F30017F3E1 /* DiagnosedHappinessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiagnosedHappinessViewController.swift; path = ../DiagnosedHappinessViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 		9AA3565F1B5680B8004F1E94 /* L03_Phychologist */ = {
 			isa = PBXGroup;
 			children = (
+				BE89472C1B5899F30017F3E1 /* DiagnosedHappinessViewController.swift */,
+				BE89472A1B5899130017F3E1 /* TextViewController.swift */,
 				9AA356621B5680B8004F1E94 /* AppDelegate.swift */,
 				9AA356821B5683D3004F1E94 /* HappinessViewController.swift */,
 				9AA356831B5683D3004F1E94 /* FaceView.swift */,
@@ -218,8 +224,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE89472B1B5899130017F3E1 /* TextViewController.swift in Sources */,
 				9AA356651B5680B8004F1E94 /* PhychologistViewController.swift in Sources */,
 				9AA356841B5683D3004F1E94 /* HappinessViewController.swift in Sources */,
+				BE89472D1B5899F30017F3E1 /* DiagnosedHappinessViewController.swift in Sources */,
 				9AA356631B5680B8004F1E94 /* AppDelegate.swift in Sources */,
 				9AA356851B5683D3004F1E94 /* FaceView.swift in Sources */,
 			);
@@ -351,6 +359,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = L03_Phychologist/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -361,6 +370,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = L03_Phychologist/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -419,6 +429,7 @@
 				9AA3567E1B5680B8004F1E94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9AA3567F1B5680B8004F1E94 /* Build configuration list for PBXNativeTarget "L03_PhychologistTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +438,7 @@
 				9AA356811B5680B8004F1E94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
