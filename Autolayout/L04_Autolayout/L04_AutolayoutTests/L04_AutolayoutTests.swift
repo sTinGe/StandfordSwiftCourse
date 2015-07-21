@@ -1,15 +1,15 @@
 //
-//  AutolayoutTests.swift
-//  AutolayoutTests
+//  L04_AutolayoutTests.swift
+//  L04_AutolayoutTests
 //
-//  Created by CS193p Instructor.
-//  Copyright (c) 2015 Stanford University. All rights reserved.
+//  Created by SuStinge on 2015/7/21.
+//  Copyright (c) 2015年 SuStinge. All rights reserved.
 //
 
 import UIKit
 import XCTest
 
-class AutolayoutTests: XCTestCase {
+class L04_AutolayoutTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
