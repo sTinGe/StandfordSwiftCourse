@@ -39,22 +39,63 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bwg-yx-xZg">
+                                <rect key="frame" x="202" y="105" width="114" height="30"/>
+                                <state key="normal" title="Change Security">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleSecurity" destination="BYZ-38-t0r" eventType="touchUpInside" id="hKK-6g-fZm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABA-JY-WX3">
+                                <rect key="frame" x="366" y="104" width="33" height="30"/>
+                                <state key="normal" title="login">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="login" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wx8-Kv-vIW"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IEd-lO-2Yl">
+                                <rect key="frame" x="16" y="104" width="178" height="30"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L2F-to-aKm">
+                                <rect key="frame" x="407" y="104" width="177" height="30"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="v2q-bc-duz" firstAttribute="leading" secondItem="0UO-99-O1n" secondAttribute="trailing" constant="8" symbolic="YES" id="1jv-Gj-aLP"/>
+                            <constraint firstItem="L2F-to-aKm" firstAttribute="leading" secondItem="ABA-JY-WX3" secondAttribute="trailing" constant="8" symbolic="YES" id="22M-Qp-cSs"/>
                             <constraint firstItem="v2q-bc-duz" firstAttribute="top" secondItem="HuF-qF-s7w" secondAttribute="bottom" constant="8" symbolic="YES" id="6H1-Dc-vZG"/>
+                            <constraint firstItem="L2F-to-aKm" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="DVm-wZ-naw"/>
+                            <constraint firstItem="L2F-to-aKm" firstAttribute="width" secondItem="IEd-lO-2Yl" secondAttribute="width" id="FLi-uO-fjF"/>
                             <constraint firstItem="0UO-99-O1n" firstAttribute="baseline" secondItem="v2q-bc-duz" secondAttribute="baseline" id="H2y-Q1-bOc"/>
+                            <constraint firstItem="Bwg-yx-xZg" firstAttribute="baseline" secondItem="ABA-JY-WX3" secondAttribute="baseline" id="Klc-NL-nNc"/>
                             <constraint firstItem="JAn-NH-seS" firstAttribute="baseline" secondItem="HuF-qF-s7w" secondAttribute="baseline" id="Mcf-Ct-30k"/>
+                            <constraint firstItem="L2F-to-aKm" firstAttribute="top" secondItem="ABA-JY-WX3" secondAttribute="top" id="NVW-fO-O3m"/>
                             <constraint firstItem="HuF-qF-s7w" firstAttribute="leading" secondItem="JAn-NH-seS" secondAttribute="trailing" constant="8" symbolic="YES" id="Nkx-I3-GNI"/>
                             <constraint firstItem="0UO-99-O1n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="SVS-Wx-u2W"/>
                             <constraint firstItem="JAn-NH-seS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="SdC-a4-QeL"/>
+                            <constraint firstItem="Bwg-yx-xZg" firstAttribute="bottom" secondItem="IEd-lO-2Yl" secondAttribute="bottom" id="b9d-Ft-TXW"/>
                             <constraint firstItem="HuF-qF-s7w" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="gJz-93-60I"/>
+                            <constraint firstItem="Bwg-yx-xZg" firstAttribute="leading" secondItem="IEd-lO-2Yl" secondAttribute="trailing" constant="8" symbolic="YES" id="kUM-Br-1hM"/>
+                            <constraint firstItem="L2F-to-aKm" firstAttribute="bottom" secondItem="ABA-JY-WX3" secondAttribute="bottom" id="mVU-Do-o4c"/>
                             <constraint firstItem="HuF-qF-s7w" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="n4J-kp-N81"/>
+                            <constraint firstItem="IEd-lO-2Yl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="naW-Nd-zVU"/>
+                            <constraint firstItem="ABA-JY-WX3" firstAttribute="top" secondItem="v2q-bc-duz" secondAttribute="bottom" constant="8" symbolic="YES" id="njP-gm-0zk"/>
                             <constraint firstItem="0UO-99-O1n" firstAttribute="width" secondItem="JAn-NH-seS" secondAttribute="width" id="v1A-4R-5Qw"/>
                             <constraint firstItem="v2q-bc-duz" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="xFg-V1-Y7R"/>
+                            <constraint firstItem="Bwg-yx-xZg" firstAttribute="top" secondItem="IEd-lO-2Yl" secondAttribute="top" id="xHK-z7-gBD"/>
+                            <constraint firstItem="ABA-JY-WX3" firstAttribute="leading" secondItem="Bwg-yx-xZg" secondAttribute="trailing" constant="50" id="zCi-4y-WxJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginField" destination="HuF-qF-s7w" id="lND-me-4JB"/>
+                        <outlet property="passwordField" destination="v2q-bc-duz" id="rQX-54-COR"/>
+                        <outlet property="passwordLabel" destination="0UO-99-O1n" id="uQB-9R-FFX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
