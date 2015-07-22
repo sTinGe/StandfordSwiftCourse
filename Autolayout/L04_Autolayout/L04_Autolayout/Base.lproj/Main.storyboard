@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -39,8 +40,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bwg-yx-xZg">
-                                <rect key="frame" x="202" y="105" width="114" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bwg-yx-xZg">
+                                <rect key="frame" x="202" y="104" width="114" height="30"/>
                                 <state key="normal" title="Change Security">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -63,43 +64,128 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L2F-to-aKm">
                                 <rect key="frame" x="407" y="104" width="177" height="30"/>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="200" verticalCompressionResistancePriority="700" image="stanford" translatesAutoresizingMaskIntoConstraints="NO" id="EPZ-Z5-dG5">
+                                <rect key="frame" x="16" y="142" width="485" height="450"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="800" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9tu-K8-Bsr">
+                                <rect key="frame" x="509" y="346" width="75" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="800" text="Company" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfc-YT-p0U">
+                                <rect key="frame" x="509" y="375" width="75" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="nfc-YT-p0U" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="1PQ-2a-SqM"/>
                             <constraint firstItem="v2q-bc-duz" firstAttribute="leading" secondItem="0UO-99-O1n" secondAttribute="trailing" constant="8" symbolic="YES" id="1jv-Gj-aLP"/>
                             <constraint firstItem="L2F-to-aKm" firstAttribute="leading" secondItem="ABA-JY-WX3" secondAttribute="trailing" constant="8" symbolic="YES" id="22M-Qp-cSs"/>
+                            <constraint firstItem="EPZ-Z5-dG5" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ABA-JY-WX3" secondAttribute="bottom" constant="14" id="2Jy-Xr-Q3O">
+                                <variation key="heightClass=regular" constant="8" symbolic="YES"/>
+                            </constraint>
+                            <constraint firstItem="EPZ-Z5-dG5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="3ce-qN-vuV"/>
                             <constraint firstItem="v2q-bc-duz" firstAttribute="top" secondItem="HuF-qF-s7w" secondAttribute="bottom" constant="8" symbolic="YES" id="6H1-Dc-vZG"/>
+                            <constraint firstItem="9tu-K8-Bsr" firstAttribute="top" secondItem="EPZ-Z5-dG5" secondAttribute="bottom" constant="25" id="9Od-fI-xb4">
+                                <variation key="heightClass=regular" constant="8" symbolic="YES"/>
+                            </constraint>
                             <constraint firstItem="L2F-to-aKm" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="DVm-wZ-naw"/>
+                            <constraint firstItem="nfc-YT-p0U" firstAttribute="top" secondItem="9tu-K8-Bsr" secondAttribute="bottom" constant="8" id="E3f-7W-WN8">
+                                <variation key="heightClass=regular" constant="8" symbolic="YES"/>
+                            </constraint>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EPZ-Z5-dG5" secondAttribute="bottom" constant="8" symbolic="YES" id="Esr-gP-UFq"/>
                             <constraint firstItem="L2F-to-aKm" firstAttribute="width" secondItem="IEd-lO-2Yl" secondAttribute="width" id="FLi-uO-fjF"/>
                             <constraint firstItem="0UO-99-O1n" firstAttribute="baseline" secondItem="v2q-bc-duz" secondAttribute="baseline" id="H2y-Q1-bOc"/>
+                            <constraint firstItem="9tu-K8-Bsr" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="I3P-Wu-0Aw"/>
+                            <constraint firstItem="nfc-YT-p0U" firstAttribute="top" secondItem="9tu-K8-Bsr" secondAttribute="bottom" constant="8" symbolic="YES" id="JVL-TN-ENE"/>
+                            <constraint firstItem="9tu-K8-Bsr" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Kdh-Zv-Y3M"/>
                             <constraint firstItem="Bwg-yx-xZg" firstAttribute="baseline" secondItem="ABA-JY-WX3" secondAttribute="baseline" id="Klc-NL-nNc"/>
                             <constraint firstItem="JAn-NH-seS" firstAttribute="baseline" secondItem="HuF-qF-s7w" secondAttribute="baseline" id="Mcf-Ct-30k"/>
                             <constraint firstItem="L2F-to-aKm" firstAttribute="top" secondItem="ABA-JY-WX3" secondAttribute="top" id="NVW-fO-O3m"/>
                             <constraint firstItem="HuF-qF-s7w" firstAttribute="leading" secondItem="JAn-NH-seS" secondAttribute="trailing" constant="8" symbolic="YES" id="Nkx-I3-GNI"/>
                             <constraint firstItem="0UO-99-O1n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="SVS-Wx-u2W"/>
                             <constraint firstItem="JAn-NH-seS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="SdC-a4-QeL"/>
+                            <constraint firstItem="EPZ-Z5-dG5" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ABA-JY-WX3" secondAttribute="bottom" constant="8" symbolic="YES" id="VaL-YX-fvr"/>
+                            <constraint firstItem="nfc-YT-p0U" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Xw2-rC-DB7"/>
+                            <constraint firstItem="EPZ-Z5-dG5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ZSh-Jh-cpU"/>
+                            <constraint firstItem="9tu-K8-Bsr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="amQ-to-Vp6"/>
                             <constraint firstItem="Bwg-yx-xZg" firstAttribute="bottom" secondItem="IEd-lO-2Yl" secondAttribute="bottom" id="b9d-Ft-TXW"/>
+                            <constraint firstItem="EPZ-Z5-dG5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bKN-82-XDl"/>
+                            <constraint firstItem="EPZ-Z5-dG5" firstAttribute="centerY" secondItem="9tu-K8-Bsr" secondAttribute="bottom" id="fMb-G0-HzD"/>
+                            <constraint firstItem="9tu-K8-Bsr" firstAttribute="leading" secondItem="EPZ-Z5-dG5" secondAttribute="trailing" constant="8" symbolic="YES" id="fpu-dw-8di"/>
                             <constraint firstItem="HuF-qF-s7w" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="gJz-93-60I"/>
                             <constraint firstItem="Bwg-yx-xZg" firstAttribute="leading" secondItem="IEd-lO-2Yl" secondAttribute="trailing" constant="8" symbolic="YES" id="kUM-Br-1hM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nfc-YT-p0U" secondAttribute="bottom" constant="38" id="loN-cu-7dJ">
+                                <variation key="heightClass=regular" constant="8" symbolic="YES"/>
+                            </constraint>
                             <constraint firstItem="L2F-to-aKm" firstAttribute="bottom" secondItem="ABA-JY-WX3" secondAttribute="bottom" id="mVU-Do-o4c"/>
+                            <constraint firstItem="nfc-YT-p0U" firstAttribute="leading" secondItem="9tu-K8-Bsr" secondAttribute="leading" id="mbB-lW-Vc8"/>
                             <constraint firstItem="HuF-qF-s7w" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="n4J-kp-N81"/>
                             <constraint firstItem="IEd-lO-2Yl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="naW-Nd-zVU"/>
                             <constraint firstItem="ABA-JY-WX3" firstAttribute="top" secondItem="v2q-bc-duz" secondAttribute="bottom" constant="8" symbolic="YES" id="njP-gm-0zk"/>
                             <constraint firstItem="0UO-99-O1n" firstAttribute="width" secondItem="JAn-NH-seS" secondAttribute="width" id="v1A-4R-5Qw"/>
                             <constraint firstItem="v2q-bc-duz" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="xFg-V1-Y7R"/>
                             <constraint firstItem="Bwg-yx-xZg" firstAttribute="top" secondItem="IEd-lO-2Yl" secondAttribute="top" id="xHK-z7-gBD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nfc-YT-p0U" secondAttribute="trailing" id="y7N-ko-sI4"/>
                             <constraint firstItem="ABA-JY-WX3" firstAttribute="leading" secondItem="Bwg-yx-xZg" secondAttribute="trailing" constant="50" id="zCi-4y-WxJ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2Jy-Xr-Q3O"/>
+                                <exclude reference="3ce-qN-vuV"/>
+                                <exclude reference="ZSh-Jh-cpU"/>
+                                <exclude reference="9Od-fI-xb4"/>
+                                <exclude reference="Kdh-Zv-Y3M"/>
+                                <exclude reference="amQ-to-Vp6"/>
+                                <exclude reference="1PQ-2a-SqM"/>
+                                <exclude reference="E3f-7W-WN8"/>
+                                <exclude reference="Xw2-rC-DB7"/>
+                                <exclude reference="loN-cu-7dJ"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <include reference="2Jy-Xr-Q3O"/>
+                                <include reference="3ce-qN-vuV"/>
+                                <exclude reference="VaL-YX-fvr"/>
+                                <include reference="ZSh-Jh-cpU"/>
+                                <exclude reference="bKN-82-XDl"/>
+                                <exclude reference="fMb-G0-HzD"/>
+                                <include reference="9Od-fI-xb4"/>
+                                <exclude reference="I3P-Wu-0Aw"/>
+                                <include reference="Kdh-Zv-Y3M"/>
+                                <include reference="amQ-to-Vp6"/>
+                                <exclude reference="fpu-dw-8di"/>
+                                <include reference="1PQ-2a-SqM"/>
+                                <include reference="E3f-7W-WN8"/>
+                                <exclude reference="JVL-TN-ENE"/>
+                                <include reference="Xw2-rC-DB7"/>
+                                <exclude reference="mbB-lW-Vc8"/>
+                                <exclude reference="y7N-ko-sI4"/>
+                                <exclude reference="Esr-gP-UFq"/>
+                                <include reference="loN-cu-7dJ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="companyLabel" destination="nfc-YT-p0U" id="ZxB-g3-5vS"/>
+                        <outlet property="imageView" destination="EPZ-Z5-dG5" id="D6m-Uf-Sht"/>
                         <outlet property="loginField" destination="HuF-qF-s7w" id="lND-me-4JB"/>
+                        <outlet property="nameLabel" destination="9tu-K8-Bsr" id="QN5-CP-2Ok"/>
                         <outlet property="passwordField" destination="v2q-bc-duz" id="rQX-54-COR"/>
                         <outlet property="passwordLabel" destination="0UO-99-O1n" id="uQB-9R-FFX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="474" y="239"/>
+            <point key="canvasLocation" x="474" y="238.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="stanford" width="394" height="589"/>
+    </resources>
 </document>

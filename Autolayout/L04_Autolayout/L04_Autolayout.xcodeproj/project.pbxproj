@@ -13,6 +13,7 @@
 		9AA455441B5DF5D7005177C3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AA455431B5DF5D7005177C3 /* Images.xcassets */; };
 		9AA455471B5DF5D7005177C3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AA455451B5DF5D7005177C3 /* LaunchScreen.xib */; };
 		9AA455531B5DF5D7005177C3 /* L04_AutolayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA455521B5DF5D7005177C3 /* L04_AutolayoutTests.swift */; };
+		BEE9367F1B5F577B00AD4553 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE9367E1B5F577B00AD4553 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		9AA4554C1B5DF5D7005177C3 /* L04_AutolayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = L04_AutolayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AA455511B5DF5D7005177C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AA455521B5DF5D7005177C3 /* L04_AutolayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L04_AutolayoutTests.swift; sourceTree = "<group>"; };
+		BEE9367E1B5F577B00AD4553 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				9AA4553E1B5DF5D7005177C3 /* ViewController.swift */,
+				BEE9367E1B5F577B00AD4553 /* User.swift */,
 				9AA455401B5DF5D7005177C3 /* Main.storyboard */,
 				9AA4553A1B5DF5D7005177C3 /* Supporting Files */,
 			);
@@ -214,6 +217,7 @@
 			files = (
 				9AA4553F1B5DF5D7005177C3 /* ViewController.swift in Sources */,
 				9AA4553D1B5DF5D7005177C3 /* AppDelegate.swift in Sources */,
+				BEE9367F1B5F577B00AD4553 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +347,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = L04_Autolayout/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -353,6 +358,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = L04_Autolayout/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -371,6 +377,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = L04_AutolayoutTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/L04_Autolayout.app/L04_Autolayout";
@@ -386,6 +393,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = L04_AutolayoutTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/L04_Autolayout.app/L04_Autolayout";
@@ -411,6 +419,7 @@
 				9AA455581B5DF5D7005177C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9AA455591B5DF5D7005177C3 /* Build configuration list for PBXNativeTarget "L04_AutolayoutTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +428,7 @@
 				9AA4555B1B5DF5D7005177C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
