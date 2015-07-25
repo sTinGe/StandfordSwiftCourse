@@ -22,3 +22,6 @@ the display value wiil push into operandStack
 you may use a method to transfer display.text to double
 by using get & set
 
+computed property:
+stored property:
+
